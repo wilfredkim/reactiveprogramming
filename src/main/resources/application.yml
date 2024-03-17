@@ -1,0 +1,15 @@
+server:
+  port: 1724
+
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/payroll_system
+    username: admin
+    password: Adm!n123$
+  flyway:
+    url: jdbc:postgresql://localhost:5432/payroll_system
+    password: Adm!n123$
+    user: admin
+    baseline-on-migrate: true
+
+

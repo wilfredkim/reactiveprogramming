@@ -1,0 +1,28 @@
+
+
+
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres
+    container_name: reactive_programming_db
+    restart: always
+    ports:
+      - '5441:5441'
+    expose:
+      - '5441'
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - backend-network
+    logging:
+      options:
+        max-size: 10m
+        max-file: "3"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=Adm!n123$
+      - POSTGRES_DB=reactivedb
+networks:
+  backend-network:
