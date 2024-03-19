@@ -12,4 +12,10 @@ spring:
     user: admin
     baseline-on-migrate: true
 
+  rabbitmq:
+    host: localhost
+    port: 15672
+    username: guest
+    password: guest
+
 
