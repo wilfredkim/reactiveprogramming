@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: reactive-programming-app-service
+spec:
+  selector:
+    app: reactive-programming-app
+  ports:
+    - protocol: TCP
+      port: 9092
+      targetPort: 9091
+  type: NodePort

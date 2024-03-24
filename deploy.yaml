@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reactive-programming-app-deploy
+  labels:
+    app: reactive-programming-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reactive-programming-app
+  template:
+    metadata:
+      labels:
+        app: reactive-programming-app
+    spec:
+      containers:
+        - name: reactive-programming-app-pod
+          image: wilfredkim5/reactive-programming-app:latest
+          ports:
+            - containerPort: 1724
+
