@@ -17,7 +17,7 @@ public class StudentController {
 
     @PostMapping
     Mono<Student> save(@RequestBody Student student) {
-        rabbitTemplate.convertAndSend("SAVE_STUDENT","STUDENTS_QUEUE", student);
+        rabbitTemplate.convertAndSend("","q.STUDENTS_QUEUE", student);
         return studentService.save(student);
     }
 

@@ -18,5 +18,6 @@ public class Student {
     private String othernames;
     private String admissionNumber;
     private String email;
+    private String mobileNumber;
     private int age;
 }
